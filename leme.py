@@ -12,7 +12,7 @@ url = "https://sislu.dasa.com.br/sislu/ws/portal/resultadosPaginadosUsuario"
 while True:
     system('cls')
     
-    req = requests.post(url, data="dataInicio=&dataFim=&paginaBuscada=0&resultadosPorPagina=20&login=7671570969&origem=LEME&senha=A22958")
+    req = requests.post(url, data="dataInicio=&dataFim=&paginaBuscada=0&resultadosPorPagina=20&login=LOGIN&origem=LEME&senha=PASSWORD")
     content = req.content
     requisicoes = json.loads(content.decode('utf-8'))
     for datas in requisicoes['requisicoes']:
